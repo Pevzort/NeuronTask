@@ -28,7 +28,14 @@ namespace NeuronTask
             var rand = new Random();
             for (int i = 0; i < inputCount; i++)
             {
-                Weights.Add(rand.NextDouble());
+                if(NeuronType == NeuronType.Input)
+                {
+                    Weights.Add(1);
+                }
+                else
+                {
+                    Weights.Add(rand.NextDouble());
+                }
                 Inputs.Add(0);
             }
         }
@@ -59,21 +66,14 @@ namespace NeuronTask
 
         private double Sigmoid(double x)
         {
-            return 1.0 / (1.0 + Math.Exp(-x));
+            //return 1.0 / (1.0 + Math.Exp(-x));
+            return Math.Sqrt(x);
         }
 
         private double SigmoidDx(double x)
         {
-            return Sigmoid(x) / (1 - Sigmoid(x));
-        }
-
-        public void SetWeights(params double[] weights)
-        {
-            //TODO: удалить после добавление возможности обучения сети
-            for(int i = 0; i < weights.Length; i++)
-            {
-                Weights[i] = weights[i];
-            }
+            //return Sigmoid(x) / (1 - Sigmoid(x));
+            return 1 / (2 * Math.Sqrt(x));
         }
 
         public void Learn(double error, double learningRate)
