@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.32126.315
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NeuronTask", "NeuronTask\NeuronTask.csproj", "{23C33D34-2183-4B76-95B8-694C080BFD1D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NeuronTaskTests", "NeuronTaskTests\NeuronTaskTests.csproj", "{DE8E40C1-0F1E-4CD5-9351-0D7E34BC7B68}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{23C33D34-2183-4B76-95B8-694C080BFD1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23C33D34-2183-4B76-95B8-694C080BFD1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23C33D34-2183-4B76-95B8-694C080BFD1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE8E40C1-0F1E-4CD5-9351-0D7E34BC7B68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE8E40C1-0F1E-4CD5-9351-0D7E34BC7B68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE8E40C1-0F1E-4CD5-9351-0D7E34BC7B68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE8E40C1-0F1E-4CD5-9351-0D7E34BC7B68}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
