@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace NeuronTask
 {
-    public enum NeuronType
+    class Program
     {
-        Input = 0,
-        Hidden = 1,
-        Output = 2
+        static void Main() 
+        {
+             
+        }
     }
 }
