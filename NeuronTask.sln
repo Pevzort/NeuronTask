@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32126.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NeuronTask", "NeuronTask\NeuronTask.csproj", "{23C33D34-2183-4B76-95B8-694C080BFD1D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{23C33D34-2183-4B76-95B8-694C080BFD1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23C33D34-2183-4B76-95B8-694C080BFD1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23C33D34-2183-4B76-95B8-694C080BFD1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23C33D34-2183-4B76-95B8-694C080BFD1D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AC220047-469C-4D0E-AA55-BD221746C331}
+	EndGlobalSection
+EndGlobal
