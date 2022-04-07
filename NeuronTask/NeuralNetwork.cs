@@ -10,6 +10,7 @@ namespace NeuronTask
     {
         public Topology Topology { get; }
         public List<Layer> Layers { get; }
+        public List<List<Neuron>> f = new List<List<Neuron>>();
 
         public NeuralNetwork(Topology topology)
         {
@@ -28,6 +29,8 @@ namespace NeuronTask
 
             FeedForwardAllLayersAfterInput();
 
+            f.Add(Layers.Last().Neurons);
+
             if (Topology.OutputCount == 1)
             {
                 return Layers.Last().Neurons[0];
@@ -40,7 +43,7 @@ namespace NeuronTask
             }
         }
 
-        public double Learn(List<Tuple<double, double[]>> dataset, int epoch)
+        public double Learn(List<(double, double[])> dataset, int epoch)
         {
             var error = 0.0;
 
@@ -71,7 +74,7 @@ namespace NeuronTask
                 var layer = Layers[i];
                 var previousLayer = Layers[i + 1];
 
-                for(int j = 0; j < layer.NeuronsCount; i++)
+                for(int j = 0; j < layer.NeuronsCount; j++)
                 {
                     var neuron = layer.Neurons[j];
 
@@ -84,7 +87,7 @@ namespace NeuronTask
                 }
             }
 
-            return Math.Pow(difference, 2);
+            return Math.Abs(difference);
         }
 
         private void FeedForwardAllLayersAfterInput()
@@ -127,10 +130,10 @@ namespace NeuronTask
 
         private void CreateHiddenLayers()
         {
+            var hiddenNeurons = new List<Neuron>();
+            var lastLayer = Layers.Last();
             for(int j = 0; j < Topology.HiddenLayers.Count; j++)
             {
-                var hiddenNeurons = new List<Neuron>();
-                var lastLayer = Layers.Last();
                 for (int i = 0; i < Topology.HiddenLayers[j]; i++)
                 {
                     var neuron = new Neuron(lastLayer.NeuronsCount);
