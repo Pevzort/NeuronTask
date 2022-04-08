@@ -75,8 +75,8 @@ namespace NeuronTask
 
         private double SigmoidDx(double x)
         {
-            //var result = 1.0 / (1.0 + Math.Exp(-x));
-            var result = 1 / 2 * Math.Sqrt(x);
+            //var result = Sigmoid(x) / (1 - Sigmoid(x));
+            var result = 1 / (2 * Math.Sqrt(x));
             //return 1.0 / (1.0 + Math.Exp(-x));
             return result;
         }

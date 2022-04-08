@@ -21,7 +21,7 @@ namespace NeuronTask.Tests
 
             var topology = new Topology(1, 1, 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001, 15);
             var neuralNetwork = new NeuralNetwork(topology);
-            var diffPow2 = neuralNetwork.Learn(dataset, 1000000);
+            var diffPow2 = neuralNetwork.Learn(dataset, 100000);
 
             var results = new List<float>();
             foreach(var data in dataset)
@@ -88,7 +88,7 @@ namespace NeuronTask.Tests
 
             for(int i = start; i < end; i += step)
             {
-                (double, double[]) n = (Math.Round(Math.Sqrt(i), 3), new double[] { i });
+                (double, double[]) n = (Math.Round(Math.Sqrt(i), 0), new double[] { i });
                 dataset.Add(n);
             }
 

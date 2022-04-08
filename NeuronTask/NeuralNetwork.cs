@@ -62,7 +62,8 @@ namespace NeuronTask
         {
             var actual = FeedForward(inputs).Output;
 
-            var difference = actual - expected;
+            //var difference = actual - expected;
+            var difference = Math.Pow((actual - expected), 2) / 2;
 
             foreach(var neuron in Layers.Last().Neurons)
             {
@@ -87,7 +88,9 @@ namespace NeuronTask
                 }
             }
 
-            return Math.Abs(difference);
+            //var result = Math.Pow(Math.Abs(difference), 2) / 2;
+            var result = Math.Abs(difference);
+            return result;
         }
 
         private void FeedForwardAllLayersAfterInput()
